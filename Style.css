@@ -1,0 +1,223 @@
+/* RESET + BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #0f0f1b, #1c1c2b);
+    color: #e0e0e0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* ANIMATED GRADIENT BACKGROUND */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #004d99, #00ccff, #001f3f);
+    background-size: 600% 600%;
+    animation: gradientShift 20s ease infinite;
+    z-index: -1;
+    opacity: 0.05;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+/* HEADER */
+header {
+    background: rgba(0, 0, 50, 0.85);
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.2);
+    backdrop-filter: blur(6px);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: slideInTop 1s ease-out forwards;
+}
+
+@keyframes slideInTop {
+    from { transform: translateY(-100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.logo {
+    font-size: 2.2rem;
+    color: #00ccff;
+    text-align: center;
+    font-weight: 700;
+    text-shadow: 0 0 8px #00ccff;
+}
+
+/* NAVIGATION */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 10px;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    color: #cce6ff;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #00ccff;
+    transition: top 0.3s ease;
+}
+
+nav ul li a:hover::before {
+    top: 0;
+}
+
+nav ul li a:hover {
+    color: #00ccff;
+    background: rgba(0, 204, 255, 0.1);
+}
+
+/* SECTION HEADINGS */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #00ccff;
+    position: relative;
+    animation: fadeInUp 1s ease;
+}
+
+/* CONTENT */
+main.container {
+    flex: 1;
+    padding: 30px 0;
+    animation: fadeInUp 1s ease;
+}
+
+.content-inner {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-inner img {
+    width: 320px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.content-inner img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px rgba(0, 255, 255, 0.5);
+}
+
+.content-inner div {
+    max-width: 600px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #e0f7ff;
+}
+
+/* COOL BUTTONS */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 20px;
+    color: #00ccff;
+    font-weight: bold;
+    background: transparent;
+    border: 2px solid #00ccff;
+    border-radius: 30px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.btn:hover {
+    background: #00ccff;
+    color: #0f0f1b;
+    box-shadow: 0 0 20px #00ccff, 0 0 40px #00ccff;
+}
+
+/* FOOTER */
+footer {
+    background: #001933;
+    color: #a0c8ff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    border-top: 1px solid #00334d;
+    box-shadow: inset 0 1px 8px rgba(0,255,255,0.05);
+}
+
+/* ANIMATIONS */
+.fade-in {
+    animation: fadeInPage 0.7s ease;
+}
+
+@keyframes fadeInPage {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* REUSABLE CARD STYLE */
+.card {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+}
