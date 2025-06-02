@@ -8,8 +8,8 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(135deg, #0f0f1b, #1c1c2b);
-    color: #e0e0e0;
+    background: linear-gradient(#F7ECE1, #5DA19E, #D8D3D8);
+color: #ffffff;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -46,7 +46,7 @@ body::before {
 
 /* HEADER */
 header {
-    background: rgba(0, 0, 50, 0.85);
+    background: rgba(247, 236, 225, 0.85);
     box-shadow: 0 4px 20px rgba(0, 255, 255, 0.2);
     backdrop-filter: blur(6px);
     padding: 20px 0;
@@ -63,10 +63,10 @@ header {
 
 .logo {
     font-size: 2.2rem;
-    color: #00ccff;
+    color: #007474;
     text-align: center;
     font-weight: 700;
-    text-shadow: 0 0 8px #00ccff;
+    text-shadow: 0 0 8px #007474;
 }
 
 /* NAVIGATION */
@@ -80,7 +80,7 @@ nav ul {
 }
 
 nav ul li a {
-    color: #cce6ff;
+    color: #8BAEB7;
     text-decoration: none;
     font-weight: 600;
     position: relative;
@@ -97,7 +97,7 @@ nav ul li a::before {
     left: 0;
     width: 100%;
     height: 3px;
-    background: #00ccff;
+    background: #5DA19E;
     transition: top 0.3s ease;
 }
 
@@ -106,7 +106,7 @@ nav ul li a:hover::before {
 }
 
 nav ul li a:hover {
-    color: #00ccff;
+    color: #18807F;
     background: rgba(0, 204, 255, 0.1);
 }
 
@@ -115,7 +115,7 @@ h2 {
     font-size: 2rem;
     margin-bottom: 20px;
     text-align: center;
-    color: #00ccff;
+    color: #18807F;
     position: relative;
     animation: fadeInUp 1s ease;
 }
@@ -159,10 +159,10 @@ main.container {
     display: inline-block;
     padding: 12px 25px;
     margin-top: 20px;
-    color: #00ccff;
+    color: #18807F;
     font-weight: bold;
     background: transparent;
-    border: 2px solid #00ccff;
+    border: 2px solid #18807F;
     border-radius: 30px;
     cursor: pointer;
     position: relative;
@@ -171,15 +171,15 @@ main.container {
 }
 
 .btn:hover {
-    background: #00ccff;
+    background: #18807F;
     color: #0f0f1b;
-    box-shadow: 0 0 20px #00ccff, 0 0 40px #00ccff;
+    box-shadow: 0 0 20px #18807F, 0 0 40px #18807F;
 }
 
 /* FOOTER */
 footer {
-    background: #001933;
-    color: #a0c8ff;
+    background: #B8BACF;
+    color: #FF10F0;
     text-align: center;
     padding: 20px 0;
     font-size: 0.9rem;

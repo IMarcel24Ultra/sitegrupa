@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Electronică și Automatizări</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Profil Electronică & Automatizări</h1>
+        <nav>
+            <ul>
+                <li><a href="#despre">Despre</a></li>
+                <li><a href="#competente">Competențe</a></li>
+                <li><a href="#proiecte">Proiecte</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="despre">
+            <h2>Ce înseamnă Electronică și Automatizări?</h2>
+            <p>Profilul de Electronică și Automatizări oferă elevilor cunoștințe fundamentale în domeniul electronicii, automatizărilor și controlului proceselor industriale.</p>
+        </section>
+
+        <section id="competente">
+            <h2>Competențe dobândite</h2>
+            <ul>
+                <li>Proiectarea și realizarea circuitelor electronice</li>
+                <li>Programarea și utilizarea microcontrolerelor</li>
+                <li>Configurarea și întreținerea sistemelor de automatizare industrială</li>
+            </ul>
+        </section>
+
+        <section id="proiecte">
+            <h2>Proiecte și activități</h2>
+            <p>Elevii particip
